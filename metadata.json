@@ -1,0 +1,6 @@
+{
+  "name": "Kah Wei & Wan Yi - Wedding Invitation",
+  "description": "A sophisticated and elegant wedding invitation for Kah Wei and Wan Yi with RSVP tracking and gallery.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
