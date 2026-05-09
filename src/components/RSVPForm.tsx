@@ -27,6 +27,7 @@ export function RSVPForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
+  const [formError, setFormError] = useState<string | null>(null);
 
   const {
     register,
@@ -52,11 +53,16 @@ export function RSVPForm() {
   const attendance = watch("attendance");
 
   const onSubmit = async (data: RSVPFormValues) => {
-    if (!user) return;
+    if (!user) {
+      setFormError('Please sign in with Google before submitting your RSVP.');
+      return;
+    }
 
+    setFormError(null);
     setIsSubmitting(true);
     const rsvpPath = `rsvps/${user.uid}`;
     try {
+      console.info('Submitting RSVP for user:', user.uid, 'path:', rsvpPath);
       await setDoc(doc(db, "rsvps", user.uid), {
         ...data,
         uid: user.uid,
@@ -65,7 +71,9 @@ export function RSVPForm() {
       });
       setIsSubmitted(true);
     } catch (error) {
-      handleFirestoreError(error, OperationType.WRITE, rsvpPath);
+      const message = error instanceof Error ? error.message : String(error);
+      setFormError(`RSVP save failed: ${message}`);
+      console.error('RSVP save failed:', message);
     } finally {
       setIsSubmitting(false);
     }
@@ -73,9 +81,12 @@ export function RSVPForm() {
 
   const handleLogin = async () => {
     try {
+      setFormError(null);
       await loginWithGoogle();
     } catch (error) {
-      console.error("Login failed:", error);
+      const message = error instanceof Error ? error.message : String(error);
+      setFormError(`Login failed: ${message}`);
+      console.error("Login failed:", message);
     }
   };
 
@@ -132,6 +143,11 @@ export function RSVPForm() {
           viewport={{ once: true }}
           className="border border-redwood/15 bg-white/85 p-6 shadow-[0_20px_80px_rgba(117,30,31,0.08)] md:p-10"
         >
+          {formError ? (
+            <div className="mb-6 rounded-lg border border-redwood/20 bg-redwood/5 px-4 py-4 text-sm text-redwood">
+              {formError}
+            </div>
+          ) : null}
           {authLoading ? (
             <div className="py-12 text-center text-ink/45">Loading... 加载中...</div>
           ) : !user ? (
