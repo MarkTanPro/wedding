@@ -44,8 +44,8 @@ service cloud.firestore {
       
       allow create: if isSignedIn() && isEmailVerified() && isValidId(rsvpId) && 
                       isValidRSVP(incoming()) && 
-                      incoming().uid == request.auth.uid &&
-                      incoming().createdAt == request.time;
+                      incoming().uid == request.auth.uid;
+      
       
       // 4. Tiered Identity Logic & 9. Immortal Fields
       allow update: if isSignedIn() && isEmailVerified() && isValidId(rsvpId) && (
