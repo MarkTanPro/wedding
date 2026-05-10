@@ -15,7 +15,7 @@ View your app in AI Studio: https://ai.studio/apps/16ad651c-5778-449e-952c-7c8ae
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GOOGLE_MAPS_PLATFORM_KEY` in [.env.local](.env.local) to your Google Maps Platform API key
 3. Run the app:
    `npm run dev`
 4. Open the local URL:
