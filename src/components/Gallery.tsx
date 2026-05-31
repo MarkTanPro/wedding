@@ -50,9 +50,9 @@ export function Gallery() {
           </p>
           <p className="mt-2 text-sm text-ivory/65">婚纱相册</p>
           <h2 className="mt-5 font-serif text-5xl font-semibold md:text-7xl">
-            {WEDDING_DETAILS.date.full}
+            Photo Memories
           </h2>
-          <p className="mt-3 text-xl text-gold">{WEDDING_DETAILS.date.fullChinese}</p>
+          <p className="mt-3 text-xl text-gold">婚纱回忆</p>
         </motion.div>
 
         <div className="mt-14 grid auto-rows-[360px] gap-4 md:grid-cols-3 md:auto-rows-[420px]">
@@ -74,9 +74,7 @@ export function Gallery() {
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-redwood/90 to-transparent p-6">
                 <p className="font-serif text-3xl font-semibold">{image.title}</p>
                 <p className="mt-1 text-sm text-gold">{image.titleChinese}</p>
-                <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-ivory/55">
-                  15.09.2026
-                </p>
+
               </figcaption>
             </motion.figure>
           ))}

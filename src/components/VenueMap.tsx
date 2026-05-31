@@ -27,9 +27,6 @@ export function VenueMap() {
           </h2>
           <p className="mt-2 text-xl text-gold">{WEDDING_DETAILS.venue.chineseName}</p>
           <p className="mt-5 text-sm leading-7 text-ink/65">
-            {WEDDING_DETAILS.date.full} | {WEDDING_DETAILS.date.fullChinese}
-          </p>
-          <p className="mt-2 text-sm leading-7 text-ink/65">
             {WEDDING_DETAILS.venue.address} | {WEDDING_DETAILS.venue.addressChinese}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -50,9 +47,9 @@ export function VenueMap() {
           </p>
           <p className="mt-2 text-sm text-ink/55">婚礼地点</p>
           <h2 className="mt-5 font-serif text-5xl font-semibold text-redwood md:text-7xl">
-            {WEDDING_DETAILS.date.full}
+            {WEDDING_DETAILS.venue.name}
           </h2>
-          <p className="mt-3 text-xl text-gold">{WEDDING_DETAILS.date.fullChinese}</p>
+          <p className="mt-3 text-xl text-gold">{WEDDING_DETAILS.venue.chineseName}</p>
         </div>
 
         <div className="h-[520px] overflow-hidden border border-redwood/15 shadow-[0_28px_100px_rgba(117,30,31,0.12)]">

@@ -22,9 +22,9 @@ export function Details() {
           </p>
           <p className="mt-2 text-sm text-ink/55">婚礼详情</p>
           <h2 className="mt-5 font-serif text-5xl font-semibold text-redwood md:text-7xl">
-            {WEDDING_DETAILS.date.full}
+            A Celebration to Remember
           </h2>
-          <p className="mt-3 text-2xl font-medium text-gold">{WEDDING_DETAILS.date.fullChinese}</p>
+          <p className="mt-3 text-2xl font-medium text-gold">感恩相聚，共庆良辰</p>
         </motion.div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -42,19 +42,22 @@ export function Details() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-redwood/10 via-redwood/5 to-redwood/90" />
             <div className="relative z-10 flex h-full min-h-[560px] flex-col justify-end p-8 md:p-12">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-gold">
-                15.09.2026
-              </p>
               <h3 className="mt-4 font-serif text-5xl font-semibold leading-none md:text-7xl">
                 We joyfully invite you
               </h3>
               <p className="mt-3 text-2xl text-gold">诚挚邀请您见证我们的婚礼</p>
               <p className="mt-6 max-w-lg text-sm leading-7 text-ivory/78">
                 With gratitude and joy, we invite you to celebrate the wedding of
-                Kah Wei & Wan Yi on 15 September 2026.
+                Kah Wei & Wan Yi.
               </p>
               <p className="mt-3 max-w-lg text-sm leading-7 text-ivory/78">
-                怀着感恩与喜悦，我们诚邀您于2026年9月15日，一同见证贾维与菀贻的幸福时刻。
+                怀着感恩与喜悦，我们诚邀您一同见证贾维与菀贻的幸福时刻。
+              </p>
+              <p className="mt-3 max-w-lg text-sm leading-7 text-ivory/78">
+                Please arrive on time so our celebration can start smoothly.
+              </p>
+              <p className="mt-3 max-w-lg text-sm leading-7 text-ivory/78">
+                请准时抵达，让我们的庆典能够顺利启程。
               </p>
             </div>
           </motion.div>
@@ -100,7 +103,12 @@ export function Details() {
               icon={<Clock className="h-5 w-5" />}
               title="Time"
               titleChinese="时间"
-              lines={[WEDDING_DETAILS.date.time, WEDDING_DETAILS.date.timeChinese]}
+              lines={[
+                WEDDING_DETAILS.date.time,
+                WEDDING_DETAILS.date.timeChinese,
+                WEDDING_DETAILS.date.arrivalNote,
+                WEDDING_DETAILS.date.arrivalNoteChinese,
+              ]}
             />
 
             <InfoCard

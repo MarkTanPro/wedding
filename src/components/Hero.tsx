@@ -44,9 +44,9 @@ export function Hero() {
           </h1>
           <div className="mx-auto my-8 h-px w-28 bg-gold/70" />
           <p className="text-2xl font-medium tracking-normal md:text-4xl">
-            {WEDDING_DETAILS.date.full}
+            A special evening together
           </p>
-          <p className="mt-2 text-lg text-ivory/80">{WEDDING_DETAILS.date.fullChinese}</p>
+          <p className="mt-2 text-lg text-ivory/80">诚挚邀请您共享美好时光</p>
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.32em] text-ivory/70">
             {WEDDING_DETAILS.venue.name} | {WEDDING_DETAILS.venue.chineseName}
           </p>

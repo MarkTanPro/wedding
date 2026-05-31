@@ -65,7 +65,7 @@ export default function App() {
               {WEDDING_DETAILS.date.full}
             </h2>
             <p className="mb-10 mt-3 text-xl text-gold">{WEDDING_DETAILS.date.fullChinese}</p>
-            <Countdown targetDate={`${WEDDING_DETAILS.date.iso}T18:30:00+08:00`} />
+            <Countdown targetDate={`${WEDDING_DETAILS.date.iso}T19:00:00+08:00`} />
           </div>
         </section>
 

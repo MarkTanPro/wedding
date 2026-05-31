@@ -12,8 +12,10 @@ export const WEDDING_DETAILS = {
     fullChinese: "2026年9月15日",
     short: "15.09.2026",
     iso: "2026-09-15",
-    time: "6:30 PM",
-    timeChinese: "下午6:30",
+    time: "7:00 PM",
+    timeChinese: "晚上7:00",
+    arrivalNote: "Please arrive by 6:45 PM so we can begin promptly.",
+    arrivalNoteChinese: "请于晚上6:45前准时抵达，以便我们准时开始。",
   },
   venue: {
     name: "Restoran Loon Sing",

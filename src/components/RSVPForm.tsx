@@ -10,9 +10,9 @@ export function RSVPForm() {
       <div className="mx-auto max-w-3xl">
         <div className="mb-12 text-center">
           <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-redwood/60">
-            RSVP for May 10, 2026
+            RSVP
           </p>
-          <p className="mt-2 text-sm text-ink/55">请回复 2026年5月10日 的出席情况</p>
+          <p className="mt-2 text-sm text-ink/55">请回复出席情况</p>
           <h2 className="mt-5 font-serif text-5xl font-semibold text-redwood md:text-7xl">
             Will You Join Us?
           </h2>
